@@ -1,0 +1,26 @@
+﻿@page "/Users"
+@using ViewModels
+
+@inject UserViewModel ViewModel
+
+<h3>Users</h3>
+@*<button class="btn btn-primary" @onclick="ViewModel.GetYsers">UserList</button>*@
+
+@if (ViewModel.Users != null)
+{
+
+    foreach (var user in ViewModel.Users)
+    {
+        <div style="grid:auto">
+            <div>@user.Id</div>
+            <div>@user.Name</div>
+            <div>@user.Email</div>
+            <div>@user.DeptName</div>
+        </div>
+    }
+
+}
+
+
+
+
